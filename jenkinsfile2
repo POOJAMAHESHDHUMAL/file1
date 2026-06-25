@@ -1,0 +1,19 @@
+pipeline{
+agent{
+node{
+label 'slave-node'
+customWorspace '/mnt/slave-node'
+}
+}
+stages{
+stage('stageone'){
+steps{
+yum install -y docker
+}
+}
+stage('stagetwo'){
+steps{
+sh 'docker ps'
+}
+}
+}
