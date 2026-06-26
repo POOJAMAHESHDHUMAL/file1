@@ -1,2 +1,1 @@
-this is one file
-a=4
+echo "hello world"
